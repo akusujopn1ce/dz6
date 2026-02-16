@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Greenshop - Home</title>
     <link rel="stylesheet" href="css/style.css">
-</head>
-<body> 
     
+    </head>
+    <body> 
     <div class="container">
         
         <header class="main-header">
@@ -19,14 +19,36 @@
                 <ul class="nav-list">
                     <li class="nav-item active"><a href="#">Home</a></li>
                     <li class="nav-item"><a href="#">Shop</a></li>
-                    <li class="nav-item"><a href="#">Plant Care</a></li>
+                    
+                    <li class="nav-item">
+                        <a href="#">Plant Care</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Drainage</a></li>
+                            <li><a href="#">Fungicides</a></li>
+                            <li><a href="#">Fertilizer</a></li>
+                            <li class="dropdown-item-parent">
+                                <a href="#">Priming <span class="arrow">›</span></a>
+                                <ul class="submenu">
+                                    <li><a href="#">Universal</a></li>
+                                    <li><a href="#">For Ficus</a></li>
+                                    <li><a href="#">For Cacti</a></li>
+                                    <li><a href="#">For Citrus</a></li>
+                                    <li><a href="#">For those in bloom</a></li>
+                                    <li><a href="#">For Orchids</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
                     <li class="nav-item"><a href="#">Blogs</a></li>
                 </ul>
             </nav>
             
             <div class="actions-col">
                 <img src="images/loop.png" alt="icon-link">
+                <div class="cart-wrapper">
                 <img src="images/cash.png" alt="btn-link">
+                <span class="cart-badge">6</span>
+            </div>
                 <a href="register.html" class="btn-login">Register</a> 
             </div>
         </header>
