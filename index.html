@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body> 
-    
     <div class="container">
         
         <header class="main-header">
@@ -19,14 +18,36 @@
                 <ul class="nav-list">
                     <li class="nav-item active"><a href="#">Home</a></li>
                     <li class="nav-item"><a href="#">Shop</a></li>
-                    <li class="nav-item"><a href="#">Plant Care</a></li>
+                    
+                    <li class="nav-item">
+                        <a href="#">Plant Care</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Drainage</a></li>
+                            <li><a href="#">Fungicides</a></li>
+                            <li><a href="#">Fertilizer</a></li>
+                            <li class="dropdown-item-parent">
+                                <a href="#">Priming <span class="arrow">›</span></a>
+                                <ul class="submenu">
+                                    <li><a href="#">Universal</a></li>
+                                    <li><a href="#">For Ficus</a></li>
+                                    <li><a href="#">For Cacti</a></li>
+                                    <li><a href="#">For Citrus</a></li>
+                                    <li><a href="#">For those in bloom</a></li>
+                                    <li><a href="#">For Orchids</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
                     <li class="nav-item"><a href="#">Blogs</a></li>
                 </ul>
             </nav>
             
             <div class="actions-col">
-                <a href="#" class="icon-link">🔍</a> 
-                <a href="#" class="icon-link">🛒</a> 
+                <img src="images/loop.png" alt="icon-link">
+                <div class="cart-wrapper">
+                    <img src="images/cash.png" alt="btn-link">
+                    <span class="cart-badge">6</span>
+                </div>
                 <a href="register.html" class="btn-login">Register</a> 
             </div>
         </header>
@@ -47,6 +68,219 @@
                 <img src="images/small-plant.png" alt="small-plant" class="hero-img-small">
             </div>
         </section>
+
+        <div class="shop-page-wrapper">
+            
+            <aside class="sidebar">
+                <div class="sidebar-block">
+                    <h3 class="sidebar-title">Categories</h3>
+                    <ul class="category-list">
+                        <li class="cat-item active"><span>House Plants</span> <span>(33)</span></li>
+                        <li class="cat-item"><span>Potter Plants</span> <span>(12)</span></li>
+                        <li class="cat-item"><span>Seeds</span> <span>(65)</span></li>
+                        <li class="cat-item"><span>Small Plants</span> <span>(39)</span></li>
+                        <li class="cat-item"><span>Big Plants</span> <span>(23)</span></li>
+                        <li class="cat-item"><span>Succulents</span> <span>(17)</span></li>
+                        <li class="cat-item"><span>Terrariums</span> <span>(19)</span></li>
+                        <li class="cat-item"><span>Gardening</span> <span>(13)</span></li>
+                        <li class="cat-item"><span>Accessories</span> <span>(18)</span></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-block">
+                    <h3 class="sidebar-title">Price Range</h3>
+                    <div class="price-slider-visual">
+                        <div class="slider-range"></div>
+                        <div class="slider-handle left"></div>
+                        <div class="slider-handle right"></div>
+                    </div>
+                    <div class="price-text">Price: <span>$39 - $1230</span></div>
+                    <button class="btn-primary btn-filter">Filter</button>
+                </div>
+
+                <div class="sidebar-block">
+                    <h3 class="sidebar-title">Size</h3>
+                    <ul class="size-list">
+                        <li class="size-item"><label>Small <span>(119)</span></label></li>
+                        <li class="size-item"><label>Medium <span>(86)</span></label></li>
+                        <li class="size-item"><label>Large <span>(78)</span></label></li>
+                    </ul>
+                </div>
+
+                <div class="sale-banner">
+                    <img src="images/salebanner.jpg" alt="Super Sale Banner">
+                </div>
+            </aside>
+
+            <div class="product-listing">
+                
+                <div class="shop-header">
+                    <ul class="shop-tabs">
+                        <li class="active">All Plants</li>
+                        <li>New Arrivals</li>
+                        <li>Sale</li>
+                    </ul>
+                    <div class="sort-by">
+                        Short by: <select><option>Default sorting</option></select>
+                    </div>
+                </div>
+
+                <div class="product-grid">
+                    
+                    <div class="product-card">
+                        <div class="product-img-box">
+                            <img src="images/plant1.png" alt="Barberton Daisy">
+                            <div class="product-actions">
+                                <button class="action-btn" title="Add to Cart"><img src="images/cart-icon.svg" alt="Cart"></button>
+                                <button class="action-btn" title="Wishlist"><img src="images/heart-icon.svg" alt="Like"></button>
+                                <button class="action-btn" title="View"><img src="images/search-icon.svg" alt="Search"></button>
+                            </div>
+                        </div>
+                        <h4 class="product-name">Barberton Daisy</h4>
+                        <p class="product-price">$119.00</p>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-img-box">
+                            <img src="images/plant2.png" alt="Angel Wing Begonia">
+                            <div class="product-actions">
+                                <button class="action-btn" title="Add to Cart"><img src="images/cart-icon.svg" alt="Cart"></button>
+                                <button class="action-btn" title="Wishlist"><img src="images/heart-icon.svg" alt="Like"></button>
+                                <button class="action-btn" title="View"><img src="images/search-icon.svg" alt="Search"></button>
+                            </div>
+                        </div>
+                        <h4 class="product-name">Angel Wing Begonia</h4>
+                        <p class="product-price">$169.00</p>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-img-box">
+                            <span class="discount-badge">13% OFF</span>
+                            <img src="images/plant3.png" alt="African Violet">
+                            <div class="product-actions">
+                                <button class="action-btn" title="Add to Cart"><img src="images/cart-icon.svg" alt="Cart"></button>
+                                <button class="action-btn" title="Wishlist"><img src="images/heart-icon.svg" alt="Like"></button>
+                                <button class="action-btn" title="View"><img src="images/search-icon.svg" alt="Search"></button>
+                            </div>
+                        </div>
+                        <h4 class="product-name">African Violet</h4>
+                        <p class="product-price">$199.00 <span class="old-price">$229.00</span></p>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-img-box">
+                            <img src="images/plant4.png" alt="Beach Spider Lily">
+                            <div class="product-actions">
+                                <button class="action-btn" title="Add to Cart"><img src="images/cart-icon.svg" alt="Cart"></button>
+                                <button class="action-btn" title="Wishlist"><img src="images/heart-icon.svg" alt="Like"></button>
+                                <button class="action-btn" title="View"><img src="images/search-icon.svg" alt="Search"></button>
+                            </div>
+                        </div>
+                        <h4 class="product-name">Beach Spider Lily</h4>
+                        <p class="product-price">$129.00</p>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-img-box">
+                            <img src="images/plant5.png" alt="Blushing Bromeliad">
+                            <div class="product-actions">
+                                <button class="action-btn" title="Add to Cart"><img src="images/cart-icon.svg" alt="Cart"></button>
+                                <button class="action-btn" title="Wishlist"><img src="images/heart-icon.svg" alt="Like"></button>
+                                <button class="action-btn" title="View"><img src="images/search-icon.svg" alt="Search"></button>
+                            </div>
+                        </div>
+                        <h4 class="product-name">Blushing Bromeliad</h4>
+                        <p class="product-price">$139.00</p>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-img-box">
+                            <img src="images/plant6.png" alt="Aluminum Plant">
+                            <div class="product-actions">
+                                <button class="action-btn" title="Add to Cart"><img src="images/cart-icon.svg" alt="Cart"></button>
+                                <button class="action-btn" title="Wishlist"><img src="images/heart-icon.svg" alt="Like"></button>
+                                <button class="action-btn" title="View"><img src="images/search-icon.svg" alt="Search"></button>
+                            </div>
+                        </div>
+                        <h4 class="product-name">Aluminum Plant</h4>
+                        <p class="product-price">$179.00</p>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-img-box">
+                            <img src="images/plant7.png" alt="Birds Nest Fern">
+                            <div class="product-actions">
+                                <button class="action-btn" title="Add to Cart"><img src="images/cart-icon.svg" alt="Cart"></button>
+                                <button class="action-btn" title="Wishlist"><img src="images/heart-icon.svg" alt="Like"></button>
+                                <button class="action-btn" title="View"><img src="images/search-icon.svg" alt="Search"></button>
+                            </div>
+                        </div>
+                        <h4 class="product-name">Bird's Nest Fern</h4>
+                        <p class="product-price">$99.00</p>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-img-box">
+                            <img src="images/plant8.png" alt="Broadleaf Lady Palm">
+                            <div class="product-actions">
+                                <button class="action-btn" title="Add to Cart"><img src="images/cart-icon.svg" alt="Cart"></button>
+                                <button class="action-btn" title="Wishlist"><img src="images/heart-icon.svg" alt="Like"></button>
+                                <button class="action-btn" title="View"><img src="images/search-icon.svg" alt="Search"></button>
+                            </div>
+                        </div>
+                        <h4 class="product-name">Broadleaf Lady Palm</h4>
+                        <p class="product-price">$59.00</p>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-img-box">
+                            <img src="images/plant9.png" alt="Chinese Evergreen">
+                            <div class="product-actions">
+                                <button class="action-btn" title="Add to Cart"><img src="images/cart-icon.svg" alt="Cart"></button>
+                                <button class="action-btn" title="Wishlist"><img src="images/heart-icon.svg" alt="Like"></button>
+                                <button class="action-btn" title="View"><img src="images/search-icon.svg" alt="Search"></button>
+                            </div>
+                        </div>
+                        <h4 class="product-name">Chinese Evergreen</h4>
+                        <p class="product-price">$39.00</p>
+                    </div>
+
+                </div> 
+                
+                <div class="pagination">
+                    <a href="#" class="page-link active">1</a>
+                    <a href="#" class="page-link">2</a>
+                    <a href="#" class="page-link">3</a>
+                    <a href="#" class="page-link">4</a>
+                    <a href="#" class="page-link">></a>
+                </div>
+
+            </div>
+        </div>
+
+        <section class="promo-section">
+            <div class="promo-card card-1">
+                <div class="promo-content">
+                    <h2>SUMMER CACTUS<br>& SUCCULENTS</h2>
+                    <p>We are an online plant shop offering a wide<br>range of cheap and trendy plants</p>
+                    <a href="#" class="btn-find-more">Find More →</a>
+                </div>
+            </div>
+            
+            <div class="promo-card card-2">
+                <div class="promo-content">
+                    <h2>STYLING TRENDS<br>& MUCH MORE</h2>
+                    <p>We are an online plant shop offering a wide<br>range of cheap and trendy plants</p>
+                    <a href="#" class="btn-find-more">Find More →</a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="main-footer">
+            <div class="footer-content">
+                <p>&copy; 2026 Greenshop. Всі права захищені.</p>
+            </div>
+        </footer>
 
     </div>
 
