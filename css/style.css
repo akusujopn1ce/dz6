@@ -32,6 +32,12 @@ body {
     font-family: 'Cera Pro', sans-serif; 
     color: #3D3D3D;
     background-color: #fff; 
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 .container {
@@ -121,13 +127,13 @@ body {
 }
 
 .hero-section {
-    width: 1400px;
-    height: 450px;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
     background-color: #F5F5F5;
     margin-top: 12px;
     border-radius: 20px;
-    padding: 0;
-    padding-left: 40px;
+    padding: 40px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -232,6 +238,7 @@ body {
     border-radius: 20px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     width: 500px; 
+    max-width: 90%;
     text-align: left;
 }
 
@@ -600,11 +607,6 @@ body {
 
 .product-card:hover .product-img-box {
     border-bottom: 1px solid #46A358;
-}
-
-.product-img-box img {
-    max-width: 100%;
-    max-height: 100%;
 }
 
 .product-name {
@@ -1053,6 +1055,8 @@ body {
     height: 46px;
     width: 61px;
     display: block;
+    position: relative;
+    bottom: -2px; 
 }
 
 .plant-top-renovation {
@@ -1066,6 +1070,8 @@ body {
     height: 49px;
     width: 68px;
     display: block;
+    position: relative;
+    bottom: -2px;
 }
 
 .plant-top-graden {
@@ -1080,6 +1086,8 @@ body {
     height: 40px;
     width: 83px;
     display: block;
+    position: relative;
+    bottom: -2px;
 }
 
 .feature-item h4 {
@@ -1255,4 +1263,158 @@ body {
 .footer-bottom p {
     color: #3D3D3D;
     font-size: 14px;
+}
+
+
+@media (max-width: 1200px) {
+    .nav-list {
+        gap: 20px;
+    }
+    .main-title, .highlight {
+        font-size: 50px;
+        line-height: 55px;
+    }
+    .features-wrapper {
+        width: 100%;
+        border-right: none;
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+    .footer-top {
+        flex-direction: column;
+    }
+    .newsletter-wrapper {
+        width: 100%;
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 992px) {
+    .main-header {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 15px 0;
+    }
+    .nav-col {
+        order: 3; 
+        width: 100%;
+        margin-top: 15px;
+    }
+    .logo-col, .actions-col {
+        width: 50%;
+    }
+    
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding-left: 0;
+    }
+    .hero-text-box, .hero-image-box {
+        width: 100%;
+        padding-right: 0;
+    }
+    .hero-image-box {
+        margin-top: 30px;
+        justify-content: center;
+    }
+    .hero-img-small {
+        left: 20%;
+    }
+    
+    .sidebar {
+        width: 100%;
+        float: none; 
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+    .product-listing {
+        width: 100%;
+        float: none; 
+        padding-left: 0;
+    }
+    
+    .product-card {
+        width: 50%; 
+    }
+    
+    .promo-section {
+        flex-direction: column;
+        margin-top: 60px;
+    }
+    .blog-card {
+        width: 48%; 
+        margin-bottom: 20px;
+    }
+    .blog-grid {
+        flex-wrap: wrap;
+    }
+    
+    .footer-contacts, .footer-links {
+        flex-wrap: wrap;
+    }
+    .contact-item {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .footer-col {
+        width: 48%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-list {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    .features-wrapper {
+        flex-wrap: wrap;
+    }
+    .feature-item {
+        width: 100%;
+        margin-bottom: 30px;
+        align-items: center;
+        text-align: center;
+    }
+    .shop-tabs {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 540px) {
+    .main-title, .highlight {
+        font-size: 36px;
+        line-height: 40px;
+    }
+    
+    .product-card {
+        width: 100%; 
+    }
+    
+    .blog-card {
+        width: 100%; 
+    }
+    
+    .footer-col {
+        width: 100%;
+    }
+    
+    .logo-col img {
+        width: 120px;
+        height: auto;
+    }
+    
+    .actions-col {
+        gap: 15px;
+    }
+    
+    .btn-login {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+    
+    .hero-img-small {
+        display: none; 
+    }
 }
