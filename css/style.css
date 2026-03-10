@@ -402,45 +402,46 @@ body {
     font-weight: bold;
 }
 
-.price-slider-visual {
-    position: relative;
+#slider-range {
     height: 5px;
     background: #e5e5e5;
+    border: none;
+    border-radius: 5px;
     margin: 20px 0;
+}
+
+#slider-range .ui-slider-range {
+    background: #46A358;
     border-radius: 5px;
 }
 
-.slider-range {
-    position: absolute;
-    left: 10%;
-    width: 50%;
-    height: 100%;
-    background: #46A358;
-}
-
-.slider-handle {
+#slider-range .ui-slider-handle {
     width: 15px;
     height: 15px;
     background: #46A358;
-    border: 3px solid white;
+    border: 3px solid #fff;
     border-radius: 50%;
-    position: absolute; 
-    top: -5px;
     box-shadow: 0 0 2px rgba(0,0,0,0.3);
+    top: -5px;
+    outline: none;
     cursor: pointer;
-    z-index: 2; 
+    margin-left: -7px; 
 }
-.slider-handle.left { left: 10%; }
-.slider-handle.right { left: 60%; }
+
+#slider-range .ui-slider-handle:focus {
+    outline: none;
+}
 
 .price-text {
     margin-bottom: 15px;
     font-size: 15px;
 }
-.price-text span {
+
+.slider-title {
     color: #46A358;
     font-weight: bold;
 }
+
 .btn-filter {
     padding: 8px 25px;
 }
@@ -449,15 +450,74 @@ body {
     list-style: none;
     padding-left: 10px;
 }
-.size-item {
-    margin-bottom: 10px;
-    font-size: 15px;
-    color: #3D3D3D;
-}
-.size-item label {
+
+.custom-checkbox {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding-left: 28px;
     cursor: pointer;
+    font-size: 15px;
+    user-select: none;
+}
+
+.custom-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 16px;
+    width: 16px;
+    background-color: #fff;
+    border: 1px solid #CBCBCB;
+    border-radius: 3px;
+    transition: all 0.2s ease-in-out;
+}
+
+.custom-checkbox:hover input ~ .checkmark {
+    border-color: #46A358;
+}
+
+.custom-checkbox input:checked ~ .checkmark {
+    border-color: #46A358;
+    background-color: #fff;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.custom-checkbox input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.custom-checkbox .checkmark:after {
+    left: 4px;
+    top: 1px;
+    width: 4px;
+    height: 8px;
+    border: solid #46A358;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.custom-checkbox .count {
+    margin-left: auto;
+    color: #727272;
+}
+
+.size-item {
+    margin-bottom: 12px;
 }
 
 .sale-banner {
@@ -465,6 +525,7 @@ body {
     text-align: center;
     padding: 0;
 }
+
 .sale-banner img {
     width: 285px;
     height: 370px;
@@ -487,16 +548,19 @@ body {
     display: flex;
     gap: 30px;
 }
+
 .shop-tabs li {
     font-size: 16px;
     cursor: pointer;
     padding-bottom: 5px;
 }
+
 .shop-tabs li.active {
     color: #46A358;
     font-weight: bold;
     border-bottom: 2px solid #46A358;
 }
+
 .sort-by select {
     border: none;
     font-family: inherit;
@@ -580,6 +644,7 @@ body {
     text-align: right;
     padding-top: 20px;
 }
+
 .page-link {
     display: inline-block;
     width: 35px;
@@ -595,6 +660,7 @@ body {
     font-weight: bold;
     transition: 0.3s;
 }
+
 .page-link:hover, .page-link.active {
     background-color: #46A358;
     color: white;
@@ -972,7 +1038,7 @@ body {
     left: 15px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Возвращаем центрирование на место */
+    align-items: center; 
     z-index: 1;
 }
 
@@ -983,39 +1049,33 @@ body {
     margin-bottom: -10px; 
 }
 
-.plant-top {
-    height: 46px;
-    width: 61px;
-    display: block;
-    margin-bottom: -2px; /* Минимальный сдвиг, чтобы убрать щель */
-}
 .plant-bottom {
     height: 46px;
     width: 61px;
     display: block;
 }
 
-/* 2. Plant Renovation (Кактус + Горшок с сердцем) */
 .plant-top-renovation {
     height: 39px;
     width: 35px;
     display: block;
-    margin-bottom: -3px; /* Стыкуем кактус с краем горшка */
+    margin-bottom: -3px;
 }
+
 .plant-bottom-renovation {
     height: 49px;
     width: 68px;
     display: block;
 }
 
-/* 3. Watering Graden (Цветок + Лейка) */
 .plant-top-graden {
     height: 49px;
     width: 44px;
     display: block;
-    margin-bottom: -4px; /* Сажаем цветок на уровень горлышка */
-    transform: translateX(5px); /* Двигаем вправо ровно в само горлышко лейки */
+    margin-bottom: -4px; 
+    transform: translateX(5px); 
 }
+
 .plant-bottom-graden {
     height: 40px;
     width: 83px;

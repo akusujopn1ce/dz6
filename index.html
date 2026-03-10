@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Greenshop - Home</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
 </head>
 <body> 
     <div class="container">
@@ -87,23 +90,37 @@
                     </ul>
                 </div>
 
-                <div class="sidebar-block">
-                    <h3 class="sidebar-title">Price Range</h3>
-                    <div class="price-slider-visual">
-                        <div class="slider-range"></div>
-                        <div class="slider-handle left"></div>
-                        <div class="slider-handle right"></div>
-                    </div>
-                    <div class="price-text">Price: <span>$39 - $1230</span></div>
-                    <button class="btn-primary btn-filter">Filter</button>
+                <div class="sidebar-block slider">
+                    <h3 class="sidebar-title slider-price">Price Range</h3>
+                    <div id="slider-range"></div>
+                    <p class="price-text">Price: <span class="slider-title">$39 - $1230</span></p>
+                    <button type="button" class="btn-primary btn-filter slider-button">Filter</button>
                 </div>
 
                 <div class="sidebar-block">
                     <h3 class="sidebar-title">Size</h3>
                     <ul class="size-list">
-                        <li class="size-item"><label>Small <span>(119)</span></label></li>
-                        <li class="size-item"><label>Medium <span>(86)</span></label></li>
-                        <li class="size-item"><label>Large <span>(78)</span></label></li>
+                        <li class="size-item">
+                            <label class="custom-checkbox">
+                                <input type="checkbox" checked>
+                                <span class="checkmark"></span>
+                                Small <span class="count">(119)</span>
+                            </label>
+                        </li>
+                        <li class="size-item">
+                            <label class="custom-checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Medium <span class="count">(86)</span>
+                            </label>
+                        </li>
+                        <li class="size-item">
+                            <label class="custom-checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Large <span class="count">(78)</span>
+                            </label>
+                        </li>
                     </ul>
                 </div>
 
@@ -457,5 +474,21 @@
             </div>
         </footer>
 
+    <script>
+        $( function() {
+            $( "#slider-range" ).slider({
+                range: true,
+                min: 0,
+                max: 1500,
+                values: [ 39, 1230 ],
+                slide: function( event, ui ) {
+                    $( ".slider-title" ).text( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+                }
+            });
+            
+            $( ".slider-title" ).text( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+            " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+        });
+    </script>
 </body>
 </html>
