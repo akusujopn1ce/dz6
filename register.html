@@ -8,6 +8,10 @@
 </head>
 <body class="register-page"> 
 
+    <div class="preloader-overlay" id="preloader">
+        <div class="loader"></div>
+    </div>
+
     <div class="form-container">
         
         <div class="form-header">
@@ -57,5 +61,13 @@
 
     </div>
 
+    <script>
+        window.addEventListener('load', function() {
+            const preloader = document.getElementById('preloader');
+            setTimeout(function() {
+                preloader.classList.add('hidden');
+            }, 500); 
+        });
+    </script>
 </body>
 </html>
